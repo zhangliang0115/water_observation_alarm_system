@@ -5,6 +5,7 @@ import com.eframework.core.control.EController;
 
 import com.eframework.core.control.IController;
 
+import com.eframework.core.model.PageInfo;
 import com.eframework.model.BussWxEventMsg;
 
 import com.eframework.kit.StrKit;
@@ -12,6 +13,8 @@ import com.eframework.kit.StrKit;
 import com.jfinal.ext.route.ControllerBind;
 
 import com.jfinal.plugin.activerecord.Record;
+
+import java.util.List;
 
 /**
  * 微信事件回复消息控制层
@@ -50,6 +53,13 @@ public class BussWxEventMsgController extends EController implements IController
 	public void del() {
 		Long[] ids = getParaValuesToLong("ids");
 		service.delByIds(ids);
+		PageInfo page = service.page(getSearchInfo());
+		List<?> rows = page.getRows();
+		for (int i = 0; i < rows.size(); i++) {
+
+
+		}
+		System.out.println(rows);
 		renderJson(new Record().set("rs", "ok"));
 	}
 
