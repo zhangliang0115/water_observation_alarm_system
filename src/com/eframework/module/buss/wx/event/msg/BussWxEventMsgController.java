@@ -53,13 +53,6 @@ public class BussWxEventMsgController extends EController implements IController
 	public void del() {
 		Long[] ids = getParaValuesToLong("ids");
 		service.delByIds(ids);
-		PageInfo page = service.page(getSearchInfo());
-		List<?> rows = page.getRows();
-		for (int i = 0; i < rows.size(); i++) {
-
-
-		}
-		System.out.println(rows);
 		renderJson(new Record().set("rs", "ok"));
 	}
 
