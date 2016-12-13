@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="water_observation_alarm_system"
+  id="myeclipse.1481597664245"
+  context-root="/water_observation_alarm_system"
+  j2ee-spec="6.0"
+  archive="water_observation_alarm_system.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
